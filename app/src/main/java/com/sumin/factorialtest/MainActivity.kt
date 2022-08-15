@@ -37,8 +37,8 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(this, "You did not enter value", Toast.LENGTH_SHORT).show()
                 }
                 is Progress -> Unit
-                is Result -> {
-                    binding.textViewFactorial.text = it.factorial
+                is Factorial -> {
+                    binding.textViewFactorial.text = it.value
                 }
             }
         }
